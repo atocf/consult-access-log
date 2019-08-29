@@ -10,13 +10,13 @@ import org.springframework.web.multipart.MultipartFile;
 import br.com.atocf.consultapi.exception.FileStorageException;
 import br.com.atocf.consultapi.exception.ResourceNotFoundException;
 import br.com.atocf.consultapi.model.UploadFileLog;
-import br.com.atocf.consultapi.repository.UploadAccessLogRepository;
+import br.com.atocf.consultapi.repository.UploadFileLogRepository;
 
 @Service
 public class UploadFileLogService {
 
 	@Autowired
-	private UploadAccessLogRepository repository;
+	private UploadFileLogRepository repository;
 
 	public UploadFileLog storeFile(MultipartFile file) {
 		String fileName = StringUtils.cleanPath(file.getOriginalFilename());
