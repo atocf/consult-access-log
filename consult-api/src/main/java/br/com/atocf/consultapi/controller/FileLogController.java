@@ -23,7 +23,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping("/accesslog")
+@RequestMapping("/filelog")
 @Api(tags = "Log", description = "Endpoint´s para atualizar, buscar, criar e deletar log.")
 public class FileLogController {
 
