@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import br.com.atocf.consultapi.model.UploadFileLog;
 
 @Repository
-public interface UploadAccessLogRepository extends JpaRepository<UploadFileLog, Long> {
+public interface UploadFileLogRepository extends JpaRepository<UploadFileLog, Long> {
 	
 	List<UploadFileLog> findByStatusAndFileName(Boolean status, String fileName);	
 }
