@@ -1,26 +1,29 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { FileLogCreateComponent } from './file-log-create/file-log-create.component';
-import { FileLogListComponent } from './file-log-list/file-log-list.component';
-import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { RouterModule } from "@angular/router";
+import { AppComponent } from "./app.component";
+import { BlankTemplateComponent } from "./template/blank-template.component";
+import { LeftNavTemplateComponent } from "./template/left-nav-template.component";
+import { AppRoutingModule, routes } from "./app.routing";
+import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
+import { HeaderComponent } from "./shared/header/header.component";
+import { NavigationComponent } from "./shared/navigation/navigation.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    FileLogCreateComponent,
-    FileLogListComponent
+    BlankTemplateComponent,
+    PageNotFoundComponent,
+    HeaderComponent,
+    LeftNavTemplateComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+    RouterModule.forRoot(routes, { useHash: true })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
